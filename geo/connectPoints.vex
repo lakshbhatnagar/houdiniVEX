@@ -1,0 +1,18 @@
+// points num
+i@totalP = @ptnum;
+
+// total points
+float totalP = length(@totalP);
+
+// creating prim
+int prim = addprim(0, "polyline");
+
+// target point number
+int tgp = chi("Target_PT");
+
+// generating lines
+for (int i = 0; i<totalP; i++)
+{
+    addvertex(0, prim, i);
+    addvertex(0, prim, tgp);
+}
