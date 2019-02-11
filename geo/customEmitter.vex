@@ -1,0 +1,29 @@
+// user input frames
+string userFrames = " " + chs("frames") + " ";
+
+// getting current frame in int 
+int currentFrame = int(@Frame);
+
+// casting int to string current frame
+string sFrames = " " + itoa(currentFrame) + " ";
+
+// creating current frame attr
+s@currentF = sFrames;
+
+// creating user frame attr
+s@userF = userFrames;
+
+//
+if(re_find(sFrames, userFrames))
+{
+    i@delete=1;
+}
+else
+{
+    i@delete=0;
+    
+    if(@delete==0)
+    {
+        removepoint(0, @ptnum);
+    }
+}
