@@ -1,0 +1,7 @@
+vector normal = point(0, "N", @ptnum);
+vector xaxis = chv("axis");
+float prod = dot(normal, xaxis);
+
+if(prod < chf("amount")) {
+    setpointattrib(0, "Cd", @ptnum, {1,0,0}, "set");
+    }
